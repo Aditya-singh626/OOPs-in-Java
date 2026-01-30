@@ -73,3 +73,22 @@ The key difference is that a Java compiler translates source code into platform-
         -Key points
          Phases: preprocessing, compiling, assembling, linking.
          Output: native binary (ELF on Linux, PE on Windows)
+
+# jave backward
+
+Java is designed to be largely backward compatible, meaning programs compiled for older Java versions usually run on newer JVMs, but perfect compatibility is not guaranteed and occasional breaking changes do occur.
+
+- What backward compatibility means for Java
+
+* Binary backward compatibility means class files compiled with an older Java compiler should run on a newer JVM without recompilation. This is a core Java design goal.
+* Source compatibility means code written for an older Java version should usually compile with a newer compiler, but language changes or removed APIs can cause compile errors.
+
+- Common exceptions and real‑world caveats
+
+* Rare incompatibilities: The Java platform has documented incompatibilities when features change (for example, library behavior, removed internal APIs, or stricter verification). These are uncommon but possible.
+* Internal and unsupported APIs: Code that depends on internal JDK classes (sun.\*) or undocumented behavior is at higher risk of breaking when the JDK is upgraded.
+* Native code and JNI: Programs using native libraries or JNI may break across JVM versions or OS changes even if Java bytecode is compatible.
+
+- Simple examples
+
+* Binary backward compatibility example: A .class file compiled with Java 8 normally runs on Java 11 JVM. When it fails: If the code used an internal API removed in a later JDK, running on the newer JVM can throw errors
