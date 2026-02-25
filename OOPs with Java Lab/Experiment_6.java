@@ -113,8 +113,8 @@ public class Experiment_6 {
 /*
     OUTPUT
     Enter Account Number: 2003547813
-    Enter Account Holder Name: Akshat Rastogi
-    Enter Initial Balance: 1000
+    Enter Account Holder Name: Aditya Singh
+    Enter Initial Balance: 10,00,00,000$
 
     ----- MENU -----
     1. Deposit
