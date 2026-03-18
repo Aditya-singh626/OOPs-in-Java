@@ -1,4 +1,4 @@
-// Name = Aditya singh
+// Name = Aditya Singh
 // Class = CSE 11
 // Roll No. = 2400320100093
 
